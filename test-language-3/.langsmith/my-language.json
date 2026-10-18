@@ -1,0 +1,151 @@
+{
+  "name": "my-language",
+  "symbols": {
+    "s3": {
+      "id": "s3",
+      "glyph": {
+        "Generated": {
+          "strokes": [
+            {
+              "Line": [
+                1,
+                2
+              ]
+            },
+            {
+              "Line": [
+                3,
+                5
+              ]
+            },
+            {
+              "Arc": [
+                0,
+                3
+              ]
+            },
+            {
+              "Arc": [
+                1,
+                4
+              ]
+            },
+            {
+              "Arc": [
+                2,
+                8
+              ]
+            },
+            {
+              "Arc": [
+                4,
+                8
+              ]
+            },
+            {
+              "Dot": 4
+            },
+            {
+              "Dot": 6
+            }
+          ],
+          "seed": 4070856543071205817
+        }
+      },
+      "gloss": "sun+moon"
+    },
+    "s2": {
+      "id": "s2",
+      "glyph": {
+        "Generated": {
+          "strokes": [
+            {
+              "Arc": [
+                0,
+                3
+              ]
+            },
+            {
+              "Arc": [
+                2,
+                8
+              ]
+            },
+            {
+              "Arc": [
+                4,
+                8
+              ]
+            },
+            {
+              "Dot": 6
+            },
+            {
+              "Hook": [
+                2,
+                8
+              ]
+            }
+          ],
+          "seed": 2433967310872101786
+        }
+      },
+      "gloss": "moon"
+    },
+    "s1": {
+      "id": "s1",
+      "glyph": {
+        "Generated": {
+          "strokes": [
+            {
+              "Line": [
+                1,
+                2
+              ]
+            },
+            {
+              "Line": [
+                3,
+                5
+              ]
+            },
+            {
+              "Arc": [
+                1,
+                4
+              ]
+            },
+            {
+              "Dot": 4
+            },
+            {
+              "Hook": [
+                8,
+                0
+              ]
+            }
+          ],
+          "seed": 1853695424081476131
+        }
+      },
+      "gloss": "sun"
+    }
+  },
+  "triples": [
+    {
+      "subject": "s3",
+      "predicate": "composed_from",
+      "object": "s1"
+    },
+    {
+      "subject": "s3",
+      "predicate": "composed_from",
+      "object": "s2"
+    },
+    {
+      "subject": "s3",
+      "predicate": "composed_via",
+      "object": "blend"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+/home/daniel-khastou/language-program/langsmithV2/langsmith/target/release/langsmith: /home/daniel-khastou/language-program/langsmithV2/langsmith/src/commands.rs /home/daniel-khastou/language-program/langsmithV2/langsmith/src/glyph.rs /home/daniel-khastou/language-program/langsmithV2/langsmith/src/main.rs /home/daniel-khastou/language-program/langsmithV2/langsmith/src/model.rs

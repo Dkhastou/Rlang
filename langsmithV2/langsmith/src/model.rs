@@ -1,0 +1,115 @@
+use crate::glyph::Shape;
+use anyhow::{anyhow, Result};
+use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
+use std::fs;
+use std::path::PathBuf;
+
+/// A symbol's glyph is either hand-typed (a literal string, the old
+/// behaviour) or generated (a structured stroke shape that can be
+/// mirrored, blended, extended and rendered).
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub enum Glyph {
+    Literal(String),
+    Generated(Shape),
+}
+
+impl Glyph {
+    /// A short, inline-friendly representation: the literal text as typed,
+    /// or a compact one-row braille sketch of the generated shape.
+    pub fn display_inline(&self) -> String {
+        match self {
+            Glyph::Literal(text) => text.clone(),
+            Glyph::Generated(shape) => shape.to_braille(12, 4),
+        }
+    }
+
+    pub fn as_shape(&self) -> Option<&Shape> {
+        match self {
+            Glyph::Generated(s) => Some(s),
+            Glyph::Literal(_) => None,
+        }
+    }
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct Symbol {
+    pub id: String,
+    pub glyph: Glyph,
+    pub gloss: String,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone, PartialEq, Eq, Hash)]
+pub struct Triple {
+    pub subject: String,
+    pub predicate: String,
+    pub object: String,
+}
+
+/// A LangStore is a disposable "language": a bag of symbols plus a set of
+/// (subject, predicate, object) triples relating them — the same shape as
+/// an RDF graph, just without a real triple store or reasoner behind it yet.
+#[derive(Debug, Serialize, Deserialize, Default)]
+pub struct LangStore {
+    pub name: String,
+    pub symbols: HashMap<String, Symbol>,
+    pub triples: Vec<Triple>,
+}
+
+impl LangStore {
+    pub fn new(name: &str) -> Self {
+        LangStore {
+            name: name.to_string(),
+            symbols: HashMap::new(),
+            triples: Vec::new(),
+        }
+    }
+
+    fn dir() -> PathBuf {
+        PathBuf::from(".langsmith")
+    }
+
+    fn path_for(name: &str) -> PathBuf {
+        Self::dir().join(format!("{}.json", name))
+    }
+
+    pub fn exists(name: &str) -> bool {
+        Self::path_for(name).exists()
+    }
+
+    pub fn load(name: &str) -> Result<Self> {
+        let path = Self::path_for(name);
+        let data = fs::read_to_string(&path)
+            .map_err(|_| anyhow!("language '{}' not found (expected {:?})", name, path))?;
+        Ok(serde_json::from_str(&data)?)
+    }
+
+    pub fn save(&self) -> Result<()> {
+        fs::create_dir_all(Self::dir())?;
+        let data = serde_json::to_string_pretty(self)?;
+        fs::write(Self::path_for(&self.name), data)?;
+        Ok(())
+    }
+
+    pub fn list_all() -> Result<Vec<String>> {
+        let dir = Self::dir();
+        if !dir.exists() {
+            return Ok(vec![]);
+        }
+        let mut names = vec![];
+        for entry in fs::read_dir(dir)? {
+            let entry = entry?;
+            if let Some(stem) = entry.path().file_stem() {
+                names.push(stem.to_string_lossy().to_string());
+            }
+        }
+        names.sort();
+        Ok(names)
+    }
+
+    pub fn require_symbol(&self, id: &str) -> Result<&Symbol> {
+        self.symbols
+            .get(id)
+            .ok_or_else(|| anyhow!("no symbol '{}' in language '{}'", id, self.name))
+    }
+}

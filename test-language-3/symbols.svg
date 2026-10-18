@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 380" width="380" height="380">
+<rect width="380" height="380" fill="white"/>
+<g transform="translate(30.0,30.0)">
+<g>
+<circle cx="22.0" cy="22.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="65.0" cy="22.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="108.0" cy="22.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="22.0" cy="65.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="65.0" cy="65.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="108.0" cy="65.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="22.0" cy="108.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="65.0" cy="108.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="108.0" cy="108.0" r="2.5" fill="#ddd" stroke="none"/>
+</g>
+<g stroke="black" stroke-width="4.5" stroke-linecap="butt" fill="none">
+<line x1="65.0" y1="22.0" x2="108.0" y2="22.0"/>
+<line x1="22.0" y1="65.0" x2="108.0" y2="65.0"/>
+<path d="M 65.0 22.0 Q 43.0 43.5 65.0 65.0"/>
+<circle cx="65.0" cy="65.0" r="6" fill="black" stroke="none"/>
+<line x1="108.0" y1="108.0" x2="22.0" y2="22.0"/>
+<line x1="22.0" y1="22.0" x2="33.3" y2="10.7"/>
+<circle cx="33.3" cy="10.7" r="2.5" fill="black" stroke="none"/>
+</g>
+</g>
+<text x="110.0" y="168.0" font-size="13" fill="black" text-anchor="middle" font-family="monospace">s1</text>
+<text x="110.0" y="182.0" font-size="10" fill="#555" text-anchor="middle" font-family="monospace">"sun"</text>
+<g transform="translate(190.0,30.0)">
+<g>
+<circle cx="22.0" cy="22.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="65.0" cy="22.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="108.0" cy="22.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="22.0" cy="65.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="65.0" cy="65.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="108.0" cy="65.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="22.0" cy="108.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="65.0" cy="108.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="108.0" cy="108.0" r="2.5" fill="#ddd" stroke="none"/>
+</g>
+<g stroke="black" stroke-width="4.5" stroke-linecap="butt" fill="none">
+<path d="M 22.0 22.0 Q 0.0 43.5 22.0 65.0"/>
+<path d="M 108.0 22.0 Q 86.0 65.0 108.0 108.0"/>
+<path d="M 65.0 65.0 Q 70.9 102.1 108.0 108.0"/>
+<circle cx="22.0" cy="108.0" r="6" fill="black" stroke="none"/>
+<line x1="108.0" y1="22.0" x2="108.0" y2="108.0"/>
+<line x1="108.0" y1="108.0" x2="92.0" y2="108.0"/>
+<circle cx="92.0" cy="108.0" r="2.5" fill="black" stroke="none"/>
+</g>
+</g>
+<text x="270.0" y="168.0" font-size="13" fill="black" text-anchor="middle" font-family="monospace">s2</text>
+<text x="270.0" y="182.0" font-size="10" fill="#555" text-anchor="middle" font-family="monospace">"moon"</text>
+<g transform="translate(30.0,190.0)">
+<g>
+<circle cx="22.0" cy="22.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="65.0" cy="22.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="108.0" cy="22.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="22.0" cy="65.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="65.0" cy="65.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="108.0" cy="65.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="22.0" cy="108.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="65.0" cy="108.0" r="2.5" fill="#ddd" stroke="none"/>
+<circle cx="108.0" cy="108.0" r="2.5" fill="#ddd" stroke="none"/>
+</g>
+<g stroke="black" stroke-width="4.5" stroke-linecap="butt" fill="none">
+<line x1="65.0" y1="22.0" x2="108.0" y2="22.0"/>
+<line x1="22.0" y1="65.0" x2="108.0" y2="65.0"/>
+<path d="M 22.0 22.0 Q 0.0 43.5 22.0 65.0"/>
+<path d="M 65.0 22.0 Q 43.0 43.5 65.0 65.0"/>
+<path d="M 108.0 22.0 Q 86.0 65.0 108.0 108.0"/>
+<path d="M 65.0 65.0 Q 70.9 102.1 108.0 108.0"/>
+<circle cx="65.0" cy="65.0" r="6" fill="black" stroke="none"/>
+<circle cx="22.0" cy="108.0" r="6" fill="black" stroke="none"/>
+</g>
+</g>
+<text x="110.0" y="328.0" font-size="13" fill="black" text-anchor="middle" font-family="monospace">s3</text>
+<text x="110.0" y="342.0" font-size="10" fill="#555" text-anchor="middle" font-family="monospace">"sun+moon"</text>
+</svg>

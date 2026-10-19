@@ -14,23 +14,10 @@ Rlang (Rapid Language) is a project coded in rust, created with heavy AI assista
 
 ### Versioning and usage
 
-Currently, the most up-to-date version is the directory titled `langsmithV2`. Simply navigate to `~/language-program/langsmithV2/langsmith/target/release`, and enter the command `export PATH=$PATH:$(pwd)` To add the langsmith command to your path for the current session. You may also use previous versions.
+Currently, the most up-to-date version is the directory titled `langsmithV2`. Simply navigate to `~/Rlang/langsmithV2/langsmith/target/release`, and enter the command `export PATH=$PATH:$(pwd)` To add the langsmith command to your path for the current session. You may also use previous versions.
+
+Use the `langsmith` command to list all the available commands that can be used. 
 
 ### Displaying symbols
 
 Displaying symbols in the terminal is one of the key intended features of the program. This can be done with chafa. As chafa is a third party tool that must be installed seperately from this project I cannot guarantee how it will work on other machines or local environments. 
-
-
-
-#### Potential Names to switch to
-
-1. Phoneme
-2. Gloss (Greek word for language)
-3. neochron (borrowed from Diachrony and synchrony as opposing viewpoints in linguistics)
-4. Glossalia (Not glossolalia)
-5. Etche
-6. Glous
-7. Nous
-8. Logos
-9. Neologe (Current pick)
-10. Neologo
